@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.rimi</groupId>
+    <artifactId>smp</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--设置打包方式-->
+    <packaging>war</packaging>
+
+    <!--配置字符编码格式和jdk版本-->
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!--spring相关依赖的版本-->
+
+        <!--spring-webmvc-->
+        <spring.mvc.version>5.1.3.RELEASE</spring.mvc.version>
+
+        <!--spring-tx-->
+        <spring.tx.version>5.1.3.RELEASE</spring.tx.version>
+
+        <!--spring-->
+        <spring.version>5.1.2.RELEASE</spring.version>
+
+        <!--aspectjweaver-->
+        <aspectjweaver.version>1.5.4</aspectjweaver.version>
+
+        <!--mybatis-spring-->
+        <mybatis.spring.version>1.3.2</mybatis.spring.version>
+
+        <!--mybatis-->
+        <mybatis.version>3.4.6</mybatis.version>
+
+        <!--mybatis-plus-->
+        <mybatis.plus.version>3.0.6</mybatis.plus.version>
+
+        <!--mysql-->
+        <mysql.version>8.0.13</mysql.version>
+
+        <!--druid-->
+        <druid.version>1.1.12</druid.version>
+
+        <!--pagehelper-->
+        <pagehelper.version>5.1.8</pagehelper.version>
+
+        <!--lombok-->
+        <lombok.version>1.18.4</lombok.version>
+
+        <!--log4j-->
+        <log4j.version>1.2.17</log4j.version>
+
+        <!--slf4j-->
+        <slf4j.version>1.8.0-beta2</slf4j.version>
+
+        <!--jstl-->
+        <jstl.version>1.2</jstl.version>
+
+        <!--commons-fileupload-->
+        <commons.version>1.3.3</commons.version>
+
+        <!--junit-->
+        <junit.version>4.12</junit.version>
+
+        <!--servlet-->
+        <servlet.version>4.0.1</servlet.version>
+    </properties>
+
+
+    <!--配置相关依赖及jar包-->
+    <dependencies>
+
+        <!--spring-mvc的jar包-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.mvc.version}</version>
+        </dependency>
+
+        <!--spring的事务管理依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.tx.version}</version>
+        </dependency>
+
+        <!--sping的测试jar包-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--spring的数据连接依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring切面的依赖-->
+        <dependency>
+            <groupId>aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectjweaver.version}</version>
+        </dependency>
+
+
+
+
+
+
+        <!--mybatis-spring整合jar包-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis.spring.version}</version>
+        </dependency>
+
+        <!--mybatis的jar包-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+
+        <!--mybatis-plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis.plus.version}</version>
+        </dependency>
+
+
+
+
+
+
+        <!--mysql驱动jar-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--druid数据连接池jar包-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!--分页插件-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+
+        <!--控制台输出显示SQL执行插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <!--日志-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <!--slf4j-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <!--jstl表达式的jar包-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <!--文件上传的jar包-->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${commons.version}</version>
+        </dependency>
+
+        <!--Junit 测试jar包-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+
+        <!--servlet-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+    </dependencies>
+
+    <!--配置tomcat-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!--端口号-->
+                    <port>8080</port>
+                    <!--路径-->
+                    <path>/</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
