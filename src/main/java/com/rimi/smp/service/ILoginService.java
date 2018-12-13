@@ -18,6 +18,6 @@ public interface ILoginService {
      * @param request  请求参数
      * @return true 登陆成功/false  登录失败
      */
-    boolean login(@Param("email") String email , @Param("password") String password , @Param("code") String code , @Param("request") HttpServletRequest request);
+    boolean login(String email , String password ,  String code , HttpServletRequest request);
 
 }

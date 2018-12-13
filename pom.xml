@@ -41,6 +41,7 @@
         <mybatis.plus.version>3.0.6</mybatis.plus.version>
 
         <!--mysql-->
+
         <mysql.version>8.0.13</mysql.version>
 
         <!--druid-->
@@ -49,8 +50,8 @@
         <!--pagehelper-->
         <pagehelper.version>5.1.8</pagehelper.version>
 
-        <!--lombok-->
-        <lombok.version>1.18.4</lombok.version>
+       <!-- &lt;!&ndash;lombok&ndash;&gt;
+        <lombok.version>1.18.4</lombok.version>-->
 
         <!--log4j-->
         <log4j.version>1.2.17</log4j.version>
@@ -82,6 +83,11 @@
             <version>${spring.mvc.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.2.RELEASE</version>
+        </dependency>
         <!--spring的事务管理依赖-->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -143,12 +149,14 @@
 
 
         <!--mysql驱动jar-->
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
+            <version>5.1.47</version>
             <scope>runtime</scope>
         </dependency>
+
 
         <!--druid数据连接池jar包-->
         <dependency>
@@ -164,12 +172,12 @@
             <version>${pagehelper.version}</version>
         </dependency>
 
-        <!--控制台输出显示SQL执行插件-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-        </dependency>
+        <!--&lt;!&ndash;控制台输出显示SQL执行插件&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<version>${lombok.version}</version>-->
+        <!--</dependency>-->
 
         <!--日志-->
         <dependency>

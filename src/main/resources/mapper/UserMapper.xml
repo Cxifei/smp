@@ -5,10 +5,12 @@
     <resultMap id="resultUser" type="com.rimi.smp.pojo.User">
         <id property="id" column="id"/>
         <result property="email" column="email"/>
-        <result property="name" column="name"/>
+        <result property="username" column="username"/>
         <result property="password" column="password"/>
         <result property="signature" column="signature"/>
         <result property="state" column="state"/>
+        <result property="sex" column="sex"/>
+        <result property="portrait" column="portrait"/>
     </resultMap>
 
     <select id="findUserByEmail" resultMap="resultUser">

@@ -32,7 +32,7 @@ public class VcodeUtil {
         //设置背景颜色
         graphics.setColor(new Color(226,226,240));
         //绘制画布尺寸...填充到图片上 x y 坐标
-        graphics.fillRect(0,0,50,30);
+        graphics.fillRect(0,0,83,50);
         //设置生成的验证码字符
         //生成随机数的对象
         Random random = new Random();
@@ -62,6 +62,8 @@ public class VcodeUtil {
         session.setAttribute("vCode",str);
 
         System.out.println(str);
+
+
         //绘制字符到图片上
         graphics.drawString(str,5,30);
 

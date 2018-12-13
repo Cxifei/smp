@@ -24,15 +24,22 @@ public class LoginServiceImpl implements ILoginService {
     private UserMapper userMapper;
 
     @Override
-    public boolean login(String email, String password, String code ,  HttpServletRequest request) {
+    public boolean login( String email, String password, String code ,  HttpServletRequest request) {
 
         //获取session
         HttpSession session = request.getSession();
 
-        String vcode = (String) session.getAttribute("code");
-        if(!vcode.equals(code)){
+        String vcode = (String) session.getAttribute("vCode");
+
+        String code1= code.toUpperCase();
+        System.out.println(code.toUpperCase());
+
+        if(!vcode.equals(code1)){
             return false;
         }
+
+        System.out.println(email);
+
         //获取对象
         User user = userMapper.findUserByEmail(email);
         //判断对象是否存在
@@ -42,6 +49,7 @@ public class LoginServiceImpl implements ILoginService {
 
         //判断密码是否正确
         String newPassword = EncryptionUtil.md5Util(password);
+
         boolean b = newPassword.equals(user.getPassword());
 
         //密码符合时  将用户信息存储在session中
