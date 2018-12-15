@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up Login</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
@@ -30,10 +30,10 @@
                 </div>
             </div>
             <div class="cont_back_info">
-                <div class="cont_img_back_grey"><img src="images/po.jpg" alt=""/></div>
+                <div class="cont_img_back_grey"><img src="images/login.jpg" alt=""/></div>
             </div>
             <div class="cont_forms">
-                <div class="cont_img_back_"><img src="images/po.jpg" alt="图片加载中....."/></div>
+                <div class="cont_img_back_"><img src="images/login.jpg" alt="图片加载中....."/></div>
                 <form action="/login" method="post">
                     <div class="cont_form_login"><a href="#" onClick="ocultar_login_sign_up()"><i
                             class="material-icons">&#xE5C4;</i></a>

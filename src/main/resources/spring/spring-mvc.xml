@@ -20,7 +20,9 @@
                 <mvc:mapping path="/**/"/>
                 <mvc:exclude-mapping path="/js/**"/>
                 <mvc:exclude-mapping path="/css/**"/>
-                <mvc:exclude-mapping path="/img/**"/>
+                <mvc:exclude-mapping path="/images/**"/>
+                <mvc:exclude-mapping path="/main_banner/**"/>
+                <mvc:exclude-mapping path="/pic/**"/>
                 <mvc:exclude-mapping path="/ValidateCode"/>
                 <mvc:exclude-mapping path="/login"/>
                 <mvc:exclude-mapping path="/index"/>
