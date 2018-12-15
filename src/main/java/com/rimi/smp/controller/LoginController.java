@@ -30,14 +30,15 @@ public class LoginController {
     @RequestMapping(value="/login" , method = RequestMethod.POST)
     public ModelAndView login(String email , String password , String code ,HttpServletRequest request){
         boolean b = loginService.login(email, password, code, request);
+        ModelAndView modelAndView = new ModelAndView();
         if (b){
-            ModelAndView modelAndView = new ModelAndView();
-            modelAndView.setViewName("/index");
             User user = userService.getUserByEmail(email);
             modelAndView.addObject("user",user);
+            modelAndView.setViewName("/index");
             return modelAndView;
         }
-        return new ModelAndView("/login");
+        modelAndView.setViewName("/login");
+        return modelAndView;
     }
 
 }
