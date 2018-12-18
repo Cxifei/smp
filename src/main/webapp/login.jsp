@@ -156,10 +156,10 @@
                     </div>
                 </div>
                 <div class="col_md_sign_up">
-                    <div class="cont_ba_opcitiy" style="margin-top: 160px">
+                    <div class="cont_ba_opcitiy">
                         <h2>注册</h2>
                         <p>如果您还没有我们的账号</p>
-                        <button class="btn_sign_up" onClick="cambiar_sign_up()" style="width: 200px">注册</button>
+                        <button class="btn_sign_up" onClick="cambiar_sign_up()">注册</button>
                     </div>
                 </div>
             </div>

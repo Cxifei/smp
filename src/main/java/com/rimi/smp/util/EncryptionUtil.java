@@ -16,7 +16,7 @@ public class EncryptionUtil {
      * @param password  用户密码
      * @return 加密后的密码
      */
-    public  static String md5Util( String password){
+    public static String md5Util( String password){
 
         String digest = DigestUtils.md5DigestAsHex(( "com.rimi.smp" + password).getBytes());
         return digest;
