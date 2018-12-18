@@ -70,6 +70,11 @@
 
         <!--servlet-->
         <servlet.version>4.0.1</servlet.version>
+
+        <!--javaMail-->
+        <mail.version>1.5.1</mail.version>
+
+
     </properties>
 
 
@@ -171,6 +176,30 @@
             <artifactId>pagehelper</artifactId>
             <version>${pagehelper.version}</version>
         </dependency>
+
+
+        <!-- 邮箱依赖jar  javax.mail-api -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>${mail.version}</version>
+            <!--<scope>test</scope>-->
+        </dependency>
+
+       <!-- <span style="white-space:pre">	</span>-->
+        <dependency >
+        <groupId >com.sun.mail </groupId >
+        <artifactId >javax.mail </artifactId >
+        <version >1.5.4 </version >
+        </dependency >
+
+
+        <!--<dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.4</version>
+        </dependency>-->
+
 
         <!--&lt;!&ndash;控制台输出显示SQL执行插件&ndash;&gt;-->
         <!--<dependency>-->

@@ -17,4 +17,7 @@ public interface IUserService {
      */
     User getUserByEmail(@Param("email") String email);
 
+    User findUserByUserName(String username);
+
+    boolean insertUser(User user);
 }

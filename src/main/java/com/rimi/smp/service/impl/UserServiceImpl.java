@@ -26,4 +26,20 @@ public class UserServiceImpl implements IUserService {
         }
        return null;
     }
+
+    @Override
+    public User findUserByUserName(String username) {
+        User user = userMapper.findUserByUserName(username);
+        if (user != null){
+            return user;
+        }
+        return null;
+    }
+
+    @Override
+    public boolean insertUser(User user) {
+
+        return  userMapper.insertUser(user);
+
+    }
 }

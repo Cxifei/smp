@@ -12,10 +12,17 @@
         <result property="sex" column="sex"/>
         <result property="portrait" column="portrait"/>
     </resultMap>
+    <insert id="insertUser" >
+        insert into user(email,username,password,state) value(#{email},#{username},#{password},1)
+    </insert>
 
     <select id="findUserByEmail" resultMap="resultUser">
 
         select * from user where email = #{email}
 
+    </select>
+
+    <select id="findUserByUserName" resultMap="resultUser">
+        select * from user where username = #{username}
     </select>
 </mapper>

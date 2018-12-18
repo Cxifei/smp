@@ -3,6 +3,7 @@ package com.rimi.smp.controller;
 import com.rimi.smp.pojo.User;
 import com.rimi.smp.service.ILoginService;
 import com.rimi.smp.service.IUserService;
+import com.rimi.smp.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,12 +33,14 @@ public class LoginController {
         boolean b = loginService.login(email, password, code, request);
         if (b){
             ModelAndView modelAndView = new ModelAndView();
-            modelAndView.setViewName("/index");
+
+            modelAndView.setViewName("redirect:index");
             User user = userService.getUserByEmail(email);
-            modelAndView.addObject("user",user);
+            modelAndView.addObject(Constant.SEESSION_USER_INFO,user);
             return modelAndView;
+
         }
-        return new ModelAndView("/login");
+        return new ModelAndView("/login.jsp");
     }
 
 }
