@@ -40,7 +40,7 @@ public class LoginController {
             return modelAndView;
 
         }
-        return new ModelAndView("/login.jsp");
+        return new ModelAndView("login");
     }
 
 }
