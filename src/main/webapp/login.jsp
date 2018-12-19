@@ -11,8 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up Login</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
         $(function(){
             $("#userName").on("blur",function(){
@@ -165,11 +165,11 @@
             </div>
             <div class="cont_back_info" style="height: 550px">
                 <div class="cont_img_back_grey">
-                    <img src="images/po.jpg" alt="加载中..."/>
+                    <img src="images/login.jpg" alt="加载中..."/>
                 </div>
             </div>
             <div class="cont_forms" style="height: 550px" >
-                <div class="cont_img_back_"><img src="images/po.jpg" alt="图片加载中..."/></div>
+                <div class="cont_img_back_"><img src="images/login.jpg" alt="图片加载中..."/></div>
                 <form action="/login" method="post" onsubmit=" return checkAll()">
                     <div class="cont_form_login"><a href="#" onClick="ocultar_login_sign_up()"><i
                             class="material-icons">&#xE5C4;</i></a>
@@ -181,7 +181,7 @@
                         <div style="margin-top: 18px">
                             <input type="text" style="padding-left: 5px; padding-right: 5px; padding-bottom: 2px;height: 37px;padding-top: 8px;"
                                    name="code" id="code" width="102px" placeholder="验证码" onblur="checkCode()"/>
-                            <a href="#" > <img src="/ValidateCode" id="image" width="83px" height="50px" onclick="run()"> </a><br/>
+                            <a href="#" > <img src="/ValidateCode" id="image" width="92px" height="50px" onclick="run()"> </a><br/>
                         </div>
                         <div style="margin-left: 10px">
                             <span id="s_code" style="margin-right: 25px"></span>
@@ -195,11 +195,11 @@
 
                         <h2>注册</h2>
 
-                        <input type="text" placeholder="邮箱" required="required" name="email" id="mail" onblur="checkMail()" />
+                        <input type="text" placeholder="邮箱" required="required" name="email" id="mail" <%--onblur="checkMail()"--%> />
                         <span><input type="button" value="发送验证码" id="sendidcode"/></span> <br/>
                         <span id="s_mail"></span>
 
-                        <input type="text" placeholder="昵称"  required="required" name="username" id="userName" onblur="checkName()"/><br/>
+                        <input type="text" placeholder="昵称"  required="required" name="username" id="userName" <%--onblur="checkName()"--%>/><br/>
 
                             <span class="warning" id="usernameMsg1">用户名已存在</span>
                             <span class="warning" id="usernameMsg2">长度为2-6个字符</span>

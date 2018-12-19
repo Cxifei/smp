@@ -686,34 +686,6 @@ $(function(){
 	}
 
 
-
-	
-//九、精选集-------------------------------------------------------------------------------
-	var oList_omnibus=document.getElementById("omnibus_list");
-	var oI=oList_omnibus.getElementsByTagName("i")[0];
-	var aSpan=oList_omnibus.getElementsByTagName("span");
-	$("#omnibus_list .post_big a").hover(function(){
-		$(this).find("i").stop(true,true).animate({left:"0px"},300);
-	},function(){
-		$(this).find("i").stop(true,true).animate({left:"305px"},300,function(){
-			oI.style.left="-305px";
-		});
-	});
-	$("#omnibus_list .post_small a").hover(function(){
-		$(this).find("span").stop(true,true).animate({left:"0px"},300);
-	},function(){
-		$(this).find("span").stop(true,true).animate({left:"130px"},300,function(){
-			for(var i=0; i<aSpan.length; i++){
-				aSpan[i].style.left="-130px";
-			}
-		});
-		
-	});
-	
-	
-	
-	
-
 });//$(function(){});        window.onload
 
 

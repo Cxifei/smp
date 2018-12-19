@@ -22,7 +22,7 @@ public class VcodeUtil {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         //先设置图片的宽度和高度
-        int width = 80;
+        int width = 90;
         int height = 40;
         //创建一个图片书籍缓冲区
         //BufferedImage.TYPE_INT_RGB 表示一个具有八位RGB颜色的分量图片:红(R)、绿(G)、蓝(B) 八位 0-256
@@ -32,7 +32,7 @@ public class VcodeUtil {
         //设置背景颜色
         graphics.setColor(new Color(226,226,240));
         //绘制画布尺寸...填充到图片上 x y 坐标
-        graphics.fillRect(0,0,83,50);
+        graphics.fillRect(0,0,90,50);
         //设置生成的验证码字符
         //生成随机数的对象
         Random random = new Random();

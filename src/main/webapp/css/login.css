@@ -35,6 +35,19 @@ margin-left: -320px;
   
 }
 
+#code{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 14px;
+  height: 20px;
+}
+
+#image{
+  padding-top: 18px;
+  width: 88px;
+  height: 40px;
+}
+
 .cont_back_info {  
 position: relative;
   float: left;
@@ -214,7 +227,7 @@ padding: 15px 0px;
 background-color: #f44336;
   border: none;
   padding: 10px;
-width: 200px;
+width: 80px;
 border-radius:3px;
 box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
   color: #fff;

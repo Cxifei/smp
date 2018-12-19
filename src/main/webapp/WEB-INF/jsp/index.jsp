@@ -10,13 +10,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/player.css" />
-    <link rel="Shortcut Icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
     <script type="text/javascript" src="js/modernizr.js"></script>
-    <script>
-        if ((!to3d()) || document.documentMode == 10 || document.documentMode == 11){
-            window.location="error/error.html";
-        }
-    </script>
 </head>
 <body>
 
@@ -28,22 +23,24 @@
     <div class="nav_topbar">
         <div class="nav_topbar_cont">
             <ul>
-            	<li><a href="">我的主页</a></li><li><a href="">个人中心</a></li><li><a href="">帮助中心</a></li>
+            	<li><a><b style="font-size: larger">欢迎你：</b></a></li>
+                <li><a><b style="font-size: small">伦家小公举</b></a></li>
+                <li><a href="#">个人中心</a></li>
             </ul>
             <!--用户登录-->
-            <a class="user_login" href="/login"><em></em>用户登录<i class="arrow"></i></a>
+            <a class="user_login" href="#"><em></em>用户登录<i class="arrow"></i></a>
             <div style="display:none;" class="user_login_box"> 
                 <p class="shadow_cover"></p>
                 <div class="user_login_inner">
-                    <form class="signin_form"> 
+                    <form class="signin_form" action="/login" method="post">
                         <input class="ipt" type="text" value="用户名" name="log"> 
                         <input class="ipt" type="password" value="密码" name="pwd"> 
                         <input name="rememberme" id="rememberme" checked="checked" value="forever" type="checkbox">记住密码
                         <input class="login_btn" type="submit" name="submit" value="登录">
                     </form>
                     <p> 
-                        <a href=""><i class="sign"></i>注册</a> | 
-                        <a href=""><i class="lock"></i>忘记密码？</a>
+                        <a href="#"><i class="sign"></i>注册</a> |
+                        <a href="#"><i class="lock"></i>忘记密码？</a>
                     </p>
                 </div>
             </div>
@@ -65,76 +62,55 @@
                 	<a href=""><span>音乐馆</span><span>音乐馆</span></a>
                 </li>
                 <li>
-                	<a href="?cat=6"><span>MV</span><span>MV</span></a>
-                </li>
-                <li>
                 	<a href="?cat=7"><span>我的音乐</span><span>我的音乐</span></a>
-                </li>
-                <li>
-                	<a href="?cat=8"><span>下载客户端</span><span>下载客户端</span></a>
                 </li>
                 <audio id="audioPlayer"></audio>
             </ul>
             <div class="user_info">
-				<div class="user_photo"><a href=""><img src="images/user_photo.png" /></a></div>
-                <a class="nikeName" href="">伦家小公举</a>
-                <a class="user_info_list" href=""><span>8</span><span>歌单</span></a>
-                <a class="user_info_list" href=""><span>3</span><span>收听</span></a>
-                <a class="user_info_list" href=""><span>0</span><span>听众</span></a>
+				<div class="user_photo"><a><img src="images/user_photo.png" /></a></div>
+                <a class="nikeName" >伦家小公举</a>
+                <a class="user_info_list" ><span>8</span><span>歌单</span></a>
+                <a class="user_info_list" ><span>3</span><span>收听</span></a>
+                <a class="user_info_list" ><span>0</span><span>听众</span></a>
             </div>
         </div>
     	<!--二级导航-->
         <nav class="sub_nav">
             <div class="nav_list">
                 <ul>
-                    <li>
-                    	<a href="" class="smallogo">
-                        	<span class="mini_logo"></span>
-                        </a>
-                    </li>
-                    <li><a href="" class="home">首页</a></li>
+                    <li><a href="#" class="home">今日星推荐</a></li>
                     
                     <div class="sub_list" id="sub_list">
                         <p class="active">
-                        	<a href="?cat=9">独家首发</a><a href="?cat=10">歌单广场</a>
+                        	<a href="?cat=10">歌单广场</a>
 							<a href="?cat=11">歌手</a>
-                            <a href="?cat=12">专辑</a><a href="?cat=13">电台</a>
-                        </p>
-                        <p>
-                        	<a href="?cat=6">MV推荐</a><a href="?cat=6">MV库</a>
-                            <a href="?cat=6">MV专题</a><a href="?cat=6">音乐现场</a>
                         </p>
                         <p>
                         	<a href="?cat=7">主页</a><a href="?cat=7">歌单</a>
                             <a href="?cat=7">收听</a><a href="?cat=7">听众</a>
-                            <a href="?cat=7">MV收藏</a>
-                        </p>
-                        <p>
-                        	<a href="?cat=8">电脑版本</a><a href="?cat=8">pad版本</a>
-                            <a href="?cat=8">手机版本</a>
                         </p>
                     </div>
                     
                     <!--搜索框 开始-->
                     <div class="search_box">
-                        <form role="search" method="get" id="searchform" class="searchform" action="">
+                        <form action="/searchPage" role="search" method="get" id="searchform" class="searchform">
 							<input type="submit" value="" class="search_btn" id="searchsubmit" />
 							<input type="text" class="search" value="搜索好音乐" name="s" id="s" />
 						</form>
                         <!--搜索下拉菜单-->
                         <div class="hot_search" id="hot_search">
                             <div>
-                                <span><a href="javascript:;">陈奕迅</a><font>171万</font></span>
+                                <span><a href="javascript:;">周杰伦</a><font>171万</font></span>
                                 <div>
-                                    <span><a href="javascript:;">周杰伦</a><font>164万</font></span>
+                                    <span><a href="javascript:;">中国好声音</a><font>164万</font></span>
                                     <div>
-                                        <span><a href="javascript:;">G.E.M. 邓紫棋</a><font>107万</font></span>
+                                        <span><a href="javascript:;">谢霆锋</a><font>107万</font></span>
                                         <div>
-                                            <span><a href="javascript:;">泡沫</a><font>90万</font></span>
+                                            <span><a href="javascript:;">太阳的后裔</a><font>90万</font></span>
                                             <div>
                                                 <span><a href="javascript:;">林俊杰</a><font>62万</font></span>
                                                 <div>
-                                                    <span><a href="javascript:;">本兮</a><font>57万</font></span>
+                                                    <span><a href="javascript:;">王力宏</a><font>57万</font></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -170,29 +146,29 @@
                 </a>
                 <ul>
                     <li id="imgCard0">
-                        <a href=""><span style="opacity:0;"></span></a>      
-                        <img src="main_banner/big0020150102211033.jpg" alt="">
-                        <p style="bottom:0">周杰伦粉丝版MV</p>
+                        <a href="#"><span style="opacity:0;"></span></a>
+                        <img width="700px" height="320px" src="main_banner/big0720150102210934.jpg" alt="">
+                        <p style="bottom:0">林俊杰经典单曲：“不为谁而作的歌”</p>
                     </li> 
                     <li id="imgCard1">
-                        <a href=""><span style="opacity:0.4;"></span></a>      
-                        <img src="main_banner/big0120150101183428.jpg" alt="">
+                        <a href="#"><span style="opacity:0.4;"></span></a>
+                        <img src="main_banner/big0320150101183351.jpg" alt="">
                         <p>乐侃有声节目第二期</p>
                     </li> 
                     <li id="imgCard2">
-                        <a href=""><span style="opacity:0.4;" ></span></a>        
-                        <img src="main_banner/big0320150101183351.jpg" alt="">
+                        <a href="#"><span style="opacity:0.4;" ></span></a>
+                        <img src="main_banner/big0020150102211033.jpg" alt="">
                         <p>乐见大牌：”荣“耀之声，”维“我独尊</p>
                     </li> 
                     <li id="imgCard3">
-                        <a href=""><span style="opacity:0.4;"></span></a>      
+                        <a href="#"><span style="opacity:0.4;"></span></a>
                         <img src="main_banner/big0420150101224343.jpg" alt="">
                         <p>王力宏四年心血结晶</p>
                     </li> 
                     <li id="imgCard4">
-                        <a href=""><span style="opacity:0.4;"></span></a>      
-                        <img src="main_banner/big0720150102210934.jpg" alt="">
-                        <p>MV精选：《武媚》女神团美艳大比拼</p>
+                        <a href="#"><span style="opacity:0.4;"></span></a>
+                        <img width="700px" height="320px" src="main_banner/big0120150101183428.jpg" alt="">
+                        <p>JAY：回顾经典，感受不一样的周董</p>
                     </li> 
                 </ul>
                 <!--火狐倒影图层-->
@@ -854,117 +830,7 @@
     </div>
     <!--推荐内容 结束-->
     
-    <!--精选集 开始-->
-    <div class="omnibus hot_singer">
-        <div class="omnibus_cont new_common">
-            <div class="omnibus_title new_common_title">
-                <span></span>
-                <a href="" class="more"></a>
-            </div>
-            <ul id="omnibus_list">
-                <li class="post_big">
-                    <a href="">
-                        <img src="images/20141010110027.jpg.jpg" alt="" width="305" height="290">
-                        <i></i>
-                    </a>
-                    <a href="">神曲虐我千百遍，我待神曲如初恋</a>
-                </li>
-                <li class="post_small">
-                    <a href="">
-                        <img src="images/20141010110103.jpg" alt="" width="130" height="130">
-                        <span></span>
-                    </a>
-                    <a href="">孤单的时候有二次元</a>
-                </li>
-                <li class="post_small">
-                    <a href="">
-                        <img src='images/20141010110157.jpg' alt="" width="130" height="130">
-                        <span></span>
-                    </a>
-                    <a href="">萌娃爱唱歌</a>
-                </li>
-                <li class="post_small">
-                    <a href="">
-                        <img src="images/20141010110216.jpg" alt="" width="130" height="130">
-                        <span></span>
-                    </a>
-                    <a href="">不疯狂,不青春</a>
-                </li>
-                <li class="post_small">
-                    <a href="">
-                        <img src='images/20141010110239.jpg' alt="" width="130" height="130">
-                        <span></span>
-                    </a>
-                    <a href="">00后出没，请注意！</a>
-                </li>
-                <li class="post_small">
-                    <a href="">
-                        <img src='images/20141013142335.jpg' alt="" width="130" height="130">
-                        <span></span>
-                    </a>
-                    <a href="">让节操碎一会儿</a>
-                </li>
-                <li class="post_small">
-                    <a href="">
-                        <img src="images/20141013142414.jpg" alt="" width="130" height="130">
-                        <span></span>
-                    </a>
-                    <a href="">笑多了会怀孕哦</a>
-                </li>
-            </ul>
-        </div>
-        <div class="hot_singer_cont new_common">
-            <div class="hot_singer_title new_common_title">
-                <span></span>
-                <a href="" class="more"></a>
-            </div>
-            <ul class="singer_list">
-                <li>
-                    <a href="?p=369" class="singerPhoto">
-                        <img src=" images/0025NhlN2yWrP4.jpg" alt="" width="70" height="70"></a>
-                    <a href="?p=369" class="singer">周杰伦</a>
-                </li>
-                <li>
-                    <a href="?p=357" class="singerPhoto">
-                        <img src="images/001BLpXF2DyJe2.jpg" alt="" width="70" height="70"></a>
-                    <a href="?p=357" class="singer">林俊杰</a>
-                </li>
-                <li>
-                    <a href="?p=363" class="singerPhoto">
-                        <img src=" images/003Nz2So3XXYek.jpg" alt="" width="70" height="70"></a>
-                    <a href="?p=363" class="singer">陈奕迅</a>
-                </li>
-                <li>
-                    <a href="?p=367" class="singerPhoto">
-                        <img src=" images/002azErJ0UcDN6.jpg" alt="" width="70" height="70"></a>
-                    <a href="?p=367" class="singer">张杰</a>
-                </li>
-                <li>
-                    <a href="?p=360" class="singerPhoto">
-                        <img src='images/001fNHEf1SFEFN.jpg' alt="" width="70" height="70"></a>
-                    <a href="?p=360" class="singer">邓紫棋</a>
-                </li>
-                <li>
-                    <a href="?p=345" class="singerPhoto">
-                        <img src=" images/000CK5xN3yZDJt.jpg" alt="" width="70" height="70"></a>
-                    <a href="?p=345" class="singer">许嵩</a>
-                </li>
-                <div style="clear:both;"></div>
-            </ul>
-            <ul class="singer_classify">
-                <li><a href="" class="singer">华语男歌手</a></li>
-                <li><a href="" class="singer">华语女歌手</a></li>
-                <li><a href="" class="singer">华语女组合</a></li>
-                <li><a href="" class="singer">日韩男歌手</a></li>
-                <li><a href="" class="singer">日韩女歌手</a></li>
-                <li><a href="" class="singer">日韩组合</a></li>
-                <li><a href="" class="singer">欧美男歌手</a></li>
-                <li><a href="" class="singer">欧美女歌手</a></li>
-                <li><a href="" class="singer">欧美组合</a></li>
-            </ul>
-        </div>
-    <div style="clear:both"></div></div>
-    <!--精选集 结束-->
+
 </section>
 <!-- 音乐馆 模块 结束 -->
 
