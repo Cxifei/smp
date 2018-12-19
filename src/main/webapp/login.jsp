@@ -22,25 +22,23 @@
                 var username = $("#userName").val();
 
                 if (!reg.test(username)){
-                    // $("#usernameMsg").attr("style","display:block;");//显示div
-                    // $("#usernameMsg").val("长度为2-6个字符");
-                    // setTimeout(function(){
-                    //     $("#usernameMsg").attr("style","display:none;")
-                    //     $("#usernameMsg").val("");
-                    // },3000);
+
                     $("#usernameMsg1").hide();
-                    $("#usernameMsg2").show(1000);
+                    $("#usernameMsg2").show(5000);
+
                     return;
+                }else{
+                    $("#usernameMsg2").hide(2000);
                 }
 
                 $.ajax({
-                    url:"/checkUserName",/*sendUserName.action*/
+                    url:"/checkUserName",
                     type:"GET",
                     data:"username="+$("#userName").val(),
                     timeout:5000,
                     success:function(data){
                         if(data == "error"){
-                            //$("#usernameMsg").css("display","inline");
+
                             $("#usernameMsg2").hide();
                             $("#usernameMsg1").show(1000);
 
@@ -58,14 +56,14 @@
 
             $("#idcode").blur(function(){
                 $.ajax({
-                    url:"/checkECode",/*sendUserName.action*/
+                    url:"/checkECode",
                     type:"GET",
 
                     data:"idcode="+$("#idcode").val(),
                     timeout:5000,
                     success:function(data){
                         if(data == "error"){
-                            //$("#usernameMsg").css("display","inline");
+
                             $("#s_reg").show(1000);
                         }else{
                             $("#s_reg").hide();
@@ -117,7 +115,7 @@
                     data:"mail="+$("#mail").val(),
                     timeout:30000,
                     success:function(data){
-                        /*alert(data)*/
+
                         $("#sendidcode").attr("value","验证码已发送");
                     },
                     error:function(){
