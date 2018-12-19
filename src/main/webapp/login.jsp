@@ -155,7 +155,7 @@
                         <button class="btn_login" onClick="cambiar_login()">登录</button>
                     </div>
                 </div>
-                <div class="col_md_sign_up">
+                <div class="col_md_sign_up" style="margin-top: 100px">
                     <div class="cont_ba_opcitiy">
                         <h2>注册</h2>
                         <p>如果您还没有我们的账号</p>
