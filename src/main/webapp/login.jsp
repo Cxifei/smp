@@ -15,6 +15,8 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
         $(function(){
+
+            /*验证用户名是否符合要求并检查该用户名是否被使用*/
             $("#userName").on("blur",function(){
                 //验证用户名  长度的为2-6个字符
                 var reg = /^[a-zA-Z0-9_@.]{2,6}$/;
@@ -54,6 +56,7 @@
             });
 
 
+            /* 验证邮箱验证码是否正确*/
             $("#idcode").blur(function(){
                 $.ajax({
                     url:"/checkECode",
@@ -76,6 +79,8 @@
                 })
             });
 
+
+           /* 验证注册时 邮箱是否符合规范并检查该邮箱号是否已被注册*/
             $("#sendidcode").click(function(){
                 if($("#mail").val() == ""){
                     $("#sendidcode").attr("disabled","true");
@@ -123,6 +128,31 @@
                     }
                 });
             });
+
+
+            /* 验证登录的邮箱号是否被管理员封号*/
+
+           /* $("#email").blur(function(){
+                $.ajax({
+                    url:"/checkEmail",
+                    type:"GET",
+
+                    data:"email="+$("#email").val(),
+                    timeout:5000,
+                    success:function(data){
+                        if(data == "error"){
+
+                            $("#s_email").show(1000);
+                        }else{
+                            $("#s_email").hide();
+                        }
+                    },
+                    error:function(){
+
+                    }
+                })
+            });*/
+
         });
 
     </script>
@@ -157,7 +187,7 @@
                     <div class="cont_ba_opcitiy">
                         <h2>注册</h2>
                         <p>如果您还没有我们的账号</p>
-                        <button class="btn_sign_up" onClick="cambiar_sign_up()">注册</button>
+                        <button class="btn_sign_up" onClick="cambiar_sign_up()" style="width: 180px">注册</button>
                     </div>
                 </div>
             </div>
@@ -193,11 +223,11 @@
 
                         <h2>注册</h2>
 
-                        <input type="text" placeholder="邮箱" required="required" name="email" id="mail" <%--onblur="checkMail()"--%> />
+                        <input type="text" placeholder="邮箱" required="required" name="email" id="mail" />
                         <span><input type="button" value="发送验证码" id="sendidcode"/></span> <br/>
                         <span id="s_mail"></span>
 
-                        <input type="text" placeholder="昵称"  required="required" name="username" id="userName" <%--onblur="checkName()"--%>/><br/>
+                        <input type="text" placeholder="昵称"  required="required" name="username" id="userName" /><br/>
 
                             <span class="warning" id="usernameMsg1">用户名已存在</span>
                             <span class="warning" id="usernameMsg2">长度为2-6个字符</span>
