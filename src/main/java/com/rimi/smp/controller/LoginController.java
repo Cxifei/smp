@@ -34,7 +34,7 @@ public class LoginController {
         if (b){
             ModelAndView modelAndView = new ModelAndView();
 
-            modelAndView.setViewName("redirect:index");
+            modelAndView.setViewName("index");
             User user = userService.getUserByEmail(email);
             modelAndView.addObject(Constant.SEESSION_USER_INFO,user);
             return modelAndView;

@@ -47,7 +47,7 @@ public class RegisterController {
         }
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("redirect:index");
+        modelAndView.setViewName("index");
         User user  = (User) request.getSession().getAttribute(Constant.SEESSION_USER_INFO);
         modelAndView.addObject(Constant.SEESSION_USER_INFO,user);
 
