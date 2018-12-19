@@ -58,7 +58,7 @@ function checkCode() {
 
 /* 注册的表单验证*/
 
-function checkMail(){
+/*function checkMail(){
     var email = document.getElementById('mail').value;
     var s_email = document.getElementById('s_mail');
 
@@ -75,10 +75,10 @@ function checkMail(){
         s_email.innerHTML = "";
         return true;
     }
-}
+}*/
 
 //验证用户名
-function checkName() {
+/*function checkName() {
     var username = document.getElementById('userName').value;
     var s_name = document.getElementById('usernameMsg');
 
@@ -88,7 +88,7 @@ function checkName() {
         return false;
     }else if (reg.test(username) == false){
         s_name.innerHTML = "<font color='red'>请输入2-6个字符，可使用_ . @符号</font>";
-       /* alert(1);*/
+       /!* alert(1);*!/
         return false;
     } else{
         s_name.innerHTML = "";
@@ -96,7 +96,7 @@ function checkName() {
     }
 
 
-}
+}*/
 
 
 function checkPassword(){
