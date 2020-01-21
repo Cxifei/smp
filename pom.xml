@@ -20,7 +20,7 @@
         <!--spring相关依赖的版本-->
 
         <!--spring-webmvc-->
-        <spring.mvc.version>5.1.3.RELEASE</spring.mvc.version>
+        <spring.mvc.version>5.2.0.RELEASE</spring.mvc.version>
 
         <!--spring-tx-->
         <spring.tx.version>5.1.3.RELEASE</spring.tx.version>
